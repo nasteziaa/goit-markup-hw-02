@@ -1,16 +1,25 @@
-:root {
-  --color-light: #4d5ae5;
-  --color-main: #2e2f42;
-  --color-text: #434455;
-}
 
+
+:root {
+  --color-primary-brand: #4d5ae5;
+  --color-dark: #2e2f42;
+  --color-succes: #31d0aa;
+  --color-text: #434455;
+  --color-subtle-text: #8e8f99;
+  --color-accent: #e7e9fc;
+  --color-light: #f4f4fd;
+}
 body {
   font-family: "Roboto", sans-serif;
-  color: var(--color-main);
+  color: var(--color-dark);
+  background-color: white;
+}
+
+.link {
+  text-decoration: none;
 }
 
 .logo {
-  text-decoration: none;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -18,11 +27,11 @@ body {
   display: flex;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--color-light);
+  color: var(--color-primary-brand);
 }
 
 .logo span {
-  color: var(--color-main);
+  color: var(--color-dark);
 }
 
 .list {
@@ -30,24 +39,22 @@ body {
 }
 
 .link:hover {
-  color: var(--color-light);
+  color: var(--color-text);
 }
 
 .link:focus {
-  color: var(--color-light);
+  color: var(--color-text);
 }
 
 .header-link {
-  text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: var(--color-main);
+  color: var(--color-dark);
 }
 
 .header-mail {
-  text-decoration: none;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -55,7 +62,6 @@ body {
 }
 
 .header-phone {
-  text-decoration: none;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -65,11 +71,11 @@ body {
 /* Main */
 
 .hero {
-  background-color: #2e2f42;
+  background-color: var(--color-dark);
 }
 
 .hero-title {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 56px;
   line-height: 1.07;
   text-align: center;
@@ -78,7 +84,8 @@ body {
 }
 
 .btn {
-  font-weight: 600;
+  font-family: inherit;
+  font-weight: 500;
   font-size: 16px;
   letter-spacing: 0.04em;
   cursor: pointer;
@@ -87,18 +94,21 @@ body {
 .main-btn {
   line-height: calc(19 / 16);
   color: #ffffff;
-  background: #4d5ae5;
+  background: var(--color-primary-brand);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 }
 
-.btn-all {
-  line-height: 1.5;
+.main-btn:hover.btn,
+.main-btn:focus.btn {
+  background-color: var(--color-primary-brand);
   color: #ffffff;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  background-color: #4d5ae5;
+}
+
+.main-btn:active.btn {
+  background: #404bbf;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
 
 .btn-portfolio {
@@ -106,11 +116,17 @@ body {
   display: flex;
   align-items: center;
   text-align: center;
-  color: #4d5ae5;
+  color: var(--color-primary-brand);
   flex: none;
   order: 0;
   flex-grow: 0;
   background-color: #f4f4fd;
+}
+
+.btn-portfolio:hover.btn,
+.btn-portfolio:focus.btn {
+  background-color: var(--color-primary-brand);
+  color: #ffffff;
 }
 
 .hide {
@@ -118,11 +134,11 @@ body {
 }
 
 .title {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  color: var(--color-main);
+  color: var(--color-dark);
 }
 
 .hero-text {
@@ -133,7 +149,7 @@ body {
 }
 
 .title-doing-team {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 36px;
   line-height: 1.11px;
   letter-spacing: 0.02em;
@@ -141,11 +157,11 @@ body {
 }
 
 .name {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  color: var(--color-main);
+  color: var(--color-dark);
 }
 
 .work {
@@ -158,11 +174,10 @@ body {
 /* Footer */
 
 .footer {
-  background-color: #2e2f42;
+  background-color: var(--color-dark);
 }
 
 .logo-footer {
-  text-decoration: none;
   font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 800;
@@ -171,16 +186,16 @@ body {
   display: flex;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--color-light);
+  color: var(--color-primary-brand);
 }
 
 .logo-footer span {
-  color: #f4f4fd;
+  color: var(--color-light);
 }
 
 .footer-text {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: #e7e9fc;
+  color: var(--color-accent);
 }
